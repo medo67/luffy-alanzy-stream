@@ -5,7 +5,7 @@ client.on('ready', () => {
 });
 
 
-const developers = ["403547199553798148"]
+const developers = ["403547199553798148","363021463739170816"]
 const adminprefix = "^";
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
@@ -22,14 +22,7 @@ client.on('message', message => {
   if (message.content.startsWith(adminprefix + 'lis')) {
   client.user.setActivity(argresult , {type:'LISTENING'});
       message.channel.send(`**Status You  ${argresult}**`)
-  } else 
-  if (message.content.startsWith(adminprefix + 'st')) {
-    client.user.setGame(argresult, "https://www.twitch.tv/M3roof");
-      message.channel.send(`**Status You ${argresult} **`)
-}
-});
-
-
+ 
 
 
 client.login(process.env.BOT_TOKEN);
